@@ -266,7 +266,7 @@ class User extends Authenticatable
 
     public function thumbnail()
     {
-        $url = config('site.storage_url');
+        $url = config('site.route_domains.storage_site');
         $image = ($this->avatar()->image == 'default') ? config('site.renderer.default_filename') : $this->avatar()->image;
 
         return "{$url}/{$image}.png";
@@ -274,7 +274,7 @@ class User extends Authenticatable
 
     public function headshot()
     {
-        $url = config('site.storage_url');
+        $url = config('site.route_domains.storage_site');
         $thumbnail = config('site.official_thumbnail');
 
         if ($this->id == 1 && $thumbnail)

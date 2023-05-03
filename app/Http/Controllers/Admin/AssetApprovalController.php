@@ -23,7 +23,7 @@ class AssetApprovalController extends Controller
 
     public function index(Request $request)
     {
-        $storage = config('site.storage_url');
+        $storage = config('site.route_domains.storage_site');
         $totalItems = Item::where('status', '=', 'pending')->count();
         $totalLogos = Group::where('is_thumbnail_pending', '=', true)->count();
 

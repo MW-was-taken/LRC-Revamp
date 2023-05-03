@@ -73,7 +73,7 @@ SOFTWARE.
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="text-center">
-                <img class="login-headshot" id="headshot" src="{{ config('site.storage_url') }}/{{ config('site.renderer.default_filename') }}_headshot.png">
+                <img class="login-headshot" id="headshot" src="{{config('site.route_domains.storage_site')}}/{{ config('site.renderer.default_filename') }}_headshot.png">
             </div>
             <h3>Login</h3>
             <div class="card">

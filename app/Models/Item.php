@@ -67,8 +67,7 @@ class Item extends Model
 
     public function creatorImage()
     {
-        $url = config('site.storage_url');
-
+        $url = config('site.route_domains.storage_site');
         switch ($this->creator_type) {
             case 'user':
                 return $this->creator->headshot();
@@ -82,7 +81,7 @@ class Item extends Model
         if ($this->status != 'approved')
             return asset("img/{$this->status}.png");
 
-        $url = config('site.storage_url');
+        $url = config('site.route_domains.storage_site');
 
         return "{$url}/{$this->thumbnail_url}.png";
     }

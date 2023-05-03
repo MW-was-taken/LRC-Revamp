@@ -32,7 +32,7 @@ class Group extends Model
         else if ($this->thumbnail_url == 'denied')
             return asset('img/denied.png');
 
-        $url = config('site.storage_url');
+        $url = config('site.route_domains.storage_site');
 
         return "{$url}/{$this->thumbnail_url}.png";
     }

@@ -8,13 +8,21 @@ return [
     'paypal_email' => 'email@gmail.com',
     'paypal_sandbox' => false,
 
+    // README: From lines 12 to 25, if you do not change these accordingly, the website literally will not work.
+
     'route_domains' => [
-        'admin_site' => 'panel.domain.com',
-        'main_site' => 'localhost'
+        'admin_site' => 'panel.robloxclone.com',
+        'main_site' => 'www.robloxclone.com',
+        'storage_site' => 'cdn.robloxclone.com',
+        'referral_site' => 'refer.robloxclone.com',
     ],
 
-    'storage_url' => 'http://cdn.domain.com',
-    'referral_url' => 'https://refer.domain.com',
+    'renderer' => [
+        'url' => 'https://renderer.domain.com',
+        'key' => 'secretkey',
+        'default_filename' => 'user', // Default thumbnail filename
+        'previews_enabled' => false
+    ],
 
     'official_thumbnail' => '/img/icon.png', // Headshot for the system account (ID 1)
 
@@ -38,13 +46,6 @@ return [
     'membership_name' => 'Gold',
     'membership_color' => '#000',
     'membership_bg_color' => '#ffc113',
-
-    'renderer' => [
-        'url' => 'https://renderer.domain.com',
-        'key' => 'secretkey',
-        'default_filename' => 'user', // Default thumbnail filename
-        'previews_enabled' => true
-    ],
 
     'socials' => [
         'discord' => '',

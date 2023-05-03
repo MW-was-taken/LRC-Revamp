@@ -53,7 +53,7 @@ SOFTWARE.
                     <p>Invite your friends to {{ config('site.name') }} to get rewarded and help us grow!</p>
                     <p>Every time a user you referred purchases currency, you will get 10% of the amount they purchased for free!</p>
                     <p>You can find your invite link below.</p>
-                    <input class="form-control" style="cursor:pointer;" type="text" name="invite_link" placeholder="Invite Link" value="{{ config('site.referral_url') }}/{{ Auth::user()->referral_code }}" readonly>
+                    <input class="form-control" style="cursor:pointer;" type="text" name="invite_link" placeholder="Invite Link" value="{{ config('site.route_domains.referral_site') }}/{{ Auth::user()->referral_code }}" readonly>
                 </div>
             </div>
         </div>

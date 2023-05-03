@@ -88,7 +88,7 @@ SOFTWARE.
                 <h3>Preview</h3>
                 <div class="card text-center">
                     <div class="card-body">
-                        <img id="preview" src="{{ config('site.storage_url') }}/{{ config('site.renderer.default_filename') }}.png">
+                        <img id="preview" src="{{ config('site.route_domains.storage_site') }}/{{ config('site.renderer.default_filename') }}.png">
                         <div class="text-danger mt-2" id="error" style="display:none;"></div>
                     </div>
                 </div>

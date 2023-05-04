@@ -1,0 +1,57 @@
+ 
+:root {
+    --brand_color: #af55d9;
+    --brand_color_darkened: #820c9b;
+    --font_family: Noto Sans, 'Source Sans Pro', sans-serif;
+    --divider_color: #2c2f35;
+
+    --body_bg: rgb(16,16,20);
+    --body_color: #fff;
+    --link_color: #007bff;
+    --link_color_hover: #0056b3;
+
+    --currency_icon_normal: url('/img/currency.png');
+    --currency_icon_light: url('/img/currency_light.png');
+    --currency_icon_navbar: url('/img/currency.png');
+
+    --headshot_bg: #454b57;
+
+    --navbar_bg: rgb(24,24,28);
+    --navbar_color: #fff;
+    --navbar_border_color: transparent;
+    --navbar_box_shadow: 0 0 5px #13131360;
+    --navbar_headshot_bg: #454b57;
+
+    --sidebar_bg: rgb(22,22,26);
+    --sidebar_bg_hover: rgb(24,24,28);
+    --sidebar_border_color: transparent;
+    --sidebar_box_shadow: 0 0 5px #13131360;
+    --sidebar_title_color: #bdbdbd;
+    --sidebar_title_border_color: #999999;
+    --sidebar_link_color: #dad8d8;
+    --sidebar_notification_bg: #af55d9;
+    --sidebar_notification_color: #fff;
+
+    --section_bg: rgb(22,22,26);
+    --section_bg_hover: rgb(24,24,28);
+    --section_bg_disabled: #2e313a;
+    --section_bg_inside: #3c4149;
+    --section_color: #fff;
+    --section_color_disabled: #eee;
+    --section_border_color: #00000020;
+    --section_border_color_inside: #343744;
+    --section_box_shadow: 0 0.125rem 0.25rem #13131360;
+
+    --input_bg: rgb(16,16,20);
+    --input_bg_disabled: #2e313a;
+    --input_bg_focus: rgb(20,20,24);
+    --input_color: #fff;
+    --input_color_placeholder: #dfd5d5;
+    --input_border_color: #25282e;
+    --input_border_color_focus: #25282e;
+
+    --text_muted_color: #8b949b;
+
+    --btn_info_bg: #2c3144;
+    --btn_info_color: #fff;
+}

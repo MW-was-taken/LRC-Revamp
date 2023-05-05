@@ -17,12 +17,13 @@ class ForumController extends Controller
     public function index()
     {
         $topics = ForumTopic::where('is_staff_only_viewing', false)->orderBy('home_page_priority', 'DESC')->get();
-
+        $recentPosts = ForumThread::limit(24)->orderBy('updated_at', 'DESC')->get();
         if (Auth::check() && Auth::user()->isStaff())
             $topics = ForumTopic::orderBy('home_page_priority', 'DESC')->get();
 
         return view('web.forum.index')->with([
-            'topics' => $topics
+            'topics' => $topics,
+            'posts' => $recentPosts,
         ]);
     }
 

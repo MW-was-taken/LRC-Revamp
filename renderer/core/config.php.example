@@ -5,7 +5,7 @@ return [
     'DB_HOST'         => 'localhost',
     'DB_NAME'         => 'roblox',
     'DB_USER'         => 'root',
-    'DB_PASS'         => 'FUCK',
+    'DB_PASS'         => '',
     'SERIOUS_KEY'     => 'key',
     'ALLOWED_TYPES'   => ['item', 'user', 'preview'],
     'FOCUS_ITEMS'     => false,
@@ -16,9 +16,9 @@ return [
 
     // Directories
     'DIRECTORIES' => [
-        'ROOT'       => '/home/eifo1/Code/laravel-roblox-clone/',
-        'UPLOADS'    => '/home/eifo1/Code/laravel-roblox-clone/uploads',
-        'THUMBNAILS' => '/home/eifo1/Code/laravel-roblox-clone/thumbnails'
+        'ROOT'       => '/var/www/storage',
+        'UPLOADS'    => '/var/www/storage/uploads',
+        'THUMBNAILS' => '/var/www/storage/thumbnails'
     ],
 
     // Colors
@@ -26,8 +26,8 @@ return [
 
     // Avatar
     'AVATARS' => [
-        'DEFAULT' => '/home/eifo1/Code/laravel-roblox-clone/renderer/blend/nobevels_avatar.blend',
-        'GADGET'  => '/home/eifo1/Code/laravel-roblox-clone/renderer/blend/nobevels_avatar_gadget.blend',
+        'DEFAULT' => '/var/www/html/renderer/blend/nobevels_avatar.blend',
+        'GADGET'  => '/var/www/html/renderer/blend/nobevels_avatar_gadget.blend',
     ],
 
     // Headshot Camera

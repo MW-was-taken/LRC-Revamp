@@ -18,8 +18,8 @@ return [
     ],
 
     'renderer' => [
-        'url' => 'https://renderer.domain.com',
-        'key' => 'secretkey',
+        'url' => 'renderer.robloxclone.com',
+        'key' => 'realrenderinghehehehe',
         'default_filename' => 'user', // Default thumbnail filename
         'previews_enabled' => false
     ],

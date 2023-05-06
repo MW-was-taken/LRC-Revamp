@@ -11,10 +11,10 @@ return [
     // README: From lines 12 to 25, if you do not change these accordingly, the website literally will not work.
 
     'route_domains' => [
-        'admin_site' => 'panel.robloxclone.com',
-        'main_site' => 'www.robloxclone.com',
-        'storage_site' => 'cdn.robloxclone.com',
-        'referral_site' => 'refer.robloxclone.com',
+        'admin_site' => 'http://panel.robloxclone.com',
+        'main_site' => 'http://www.robloxclone.com',
+        'storage_site' => 'http://cdn.robloxclone.com',
+        'referral_site' => 'http://refer.robloxclone.com',
     ],
 
     'renderer' => [

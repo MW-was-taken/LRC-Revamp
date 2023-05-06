@@ -38,6 +38,14 @@
         a, a:hover, a:focus {
             text-decoration: none;
         }
+        
+        a {
+            color: var(--brand_color);
+        }
+
+        a, a:hover, a:focus {
+            color: var(--brand_color_darkened);
+        }
 
         .navbar-search-dropdown-parent {
             width: 50%;

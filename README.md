@@ -4,10 +4,6 @@ As of 5/3/23, this is the only active fork of LRC. At this point, I believe the 
 <br>
 <br>
 
-# Setup
-section coming soon hahaahahhaa
+# Documentation
 
-
-
-# Contributing
-Contributions are greatly appreciated, and I have no guidelines for contribution either. You can add backend code, frontend improvements, hell, I'll accept your PR if you fix a spelling mistake. More work off of my back.
+For instructions on how to setup this project, or how to contribute to this project, you can check the wiki tab at the top of your screen or [click here](https://github.com/eIfo1/LRC-Revamp/wiki).

@@ -2,6 +2,79 @@
      'title' => $topic->name,
  ])
 
+@section('css')
+    <style>
+        .topic {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            transition: 125ms ease all;
+            background: var(--section_bg);
+        }
+
+        .topic {
+            border-bottom: 1px solid var(--divider_color);
+        }
+
+        .topic:hover {
+            background: var(--section_bg_hover);
+        }
+    </style>
+    <style>
+        .thread {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            transition: 125ms ease all;
+            background: var(--section_bg);
+        }
+
+        .thread {
+            border-bottom: 1px solid var(--divider_color);
+        }
+
+
+        .thread:hover {
+            background: var(--section_bg_hover);
+        }
+
+        .topic .user-headshot {
+            width: 50px;
+            height: 50px;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic .user-headshot img {
+            background: var(--headshot_bg);
+            border-radius: 50%;
+        }
+
+        .topic .details {
+            padding-left: 25px;
+        }
+
+        .topic .status {
+            font-size: 11px;
+            border-radius: 4px;
+            margin-top: -2px;
+            margin-right: 5px;
+            padding: 0.5px 5px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .topic .status i {
+            font-size: 10px;
+            vertical-align: middle;
+        }
+
+        .topic .status i.fa-lock {
+            margin-top: -1px;
+        }
+    </style>
+@endsection
+
+
  @section('css')
      <style>
          .thread {
@@ -68,17 +141,18 @@
                  <p>There are no threads in this topic. Maybe <a
                          href="{{ route('forum.new', ['thread', $topic->id]) }}">create one?</a></p>
              @else
-                 <div class="p-2 bg-primary text-white" style="padding-left:15px;padding-right:15px;">
+                 <div class="p-2 px-4 bg-primary text-white rounded">
                      <div class="row">
-                         <div class="col-md-8">Post</div>
-                         <div class="col-md-2 text-center hide-sm">Replies</div>
-                         <div class="col-md-2 text-center hide-sm">Last Reply</div>
+                         <div class="col-md-6">Thread</div>
+                         <div class="col-md-3 text-center hide-sm">Replies</div>
+                         <div class="col-md-3 text-center hide-sm">Last Reply</div>
                      </div>
                  </div>
+                 <div class="mb-2"></div>
                  <div class="card-body" style="padding-top:0;padding-left:15px;padding-right:15px;padding-bottom:0;">
                      @foreach ($topic->threads() as $thread)
-                         <div class="row thread" @if ($thread->is_deleted) style="opacity:.5;" @endif>
-                             <div class="col-md-8">
+                         <div class="row topic rounded" @if ($thread->is_deleted) style="opacity:.5;" @endif>
+                             <div class="col-md-6">
                                  <div class="user-headshot">
                                      <img src="{{ $thread->creator->headshot() }}">
                                  </div>
@@ -101,9 +175,9 @@
                                      </div>
                                  </div>
                              </div>
-                             <div class="col-md-2 text-center align-self-center hide-sm">
+                             <div class="col-md-3 text-center align-self-center hide-sm">
                                  {{ number_format($thread->replies(false)->count()) }}</div>
-                             <div class="col-md-2 text-center align-self-center text-truncate hide-sm">
+                             <div class="col-md-3 text-center align-self-center text-truncate hide-sm">
                                  @if ($thread->lastReply())
                                      <a href="{{ route('users.profile', $thread->lastReply()->creator->username) }}"
                                          @if ($thread->lastReply()->creator->isStaff()) class="text-danger" @endif>{{ $thread->lastReply()->creator->username }}</a>
@@ -115,6 +189,7 @@
                                  @endif
                              </div>
                          </div>
+                         <div class="mb-1"></div>
                      @endforeach
                  </div>
                  {{ $topic->threads()->onEachSide(1) }}

@@ -22,6 +22,7 @@ class CreateForumTopicsTable extends Migration
             $table->string('name');
             $table->text('description');
             $table->integer('home_page_priority');
+            $table->integer('belongs_to_category');
             $table->boolean('is_staff_only_viewing')->default(false);
             $table->boolean('is_staff_only_posting')->default(false);
             $table->timestamps();
@@ -29,11 +30,12 @@ class CreateForumTopicsTable extends Migration
 
         DB::table('forum_topics')->insert([
             [
-                'name' => 'Information & Announcements',
+                'name' => 'Update Center',
                 'description' => 'Important news such as new features, ideas to talk about, events and server events will be posted here.',
                 'home_page_priority' => 255,
                 'is_staff_only_viewing' => false,
                 'is_staff_only_posting' => true,
+                'belongs_to_category' => 1,
                 'created_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString()
             ],
@@ -43,6 +45,7 @@ class CreateForumTopicsTable extends Migration
                 'home_page_priority' => 100,
                 'is_staff_only_viewing' => false,
                 'is_staff_only_posting' => false,
+                'belongs_to_category' => 2,
                 'created_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString()
             ],
@@ -52,6 +55,7 @@ class CreateForumTopicsTable extends Migration
                 'home_page_priority' => 90,
                 'is_staff_only_viewing' => false,
                 'is_staff_only_posting' => false,
+                'belongs_to_category' => 2,
                 'created_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString()
             ],
@@ -61,6 +65,7 @@ class CreateForumTopicsTable extends Migration
                 'home_page_priority' => 80,
                 'is_staff_only_viewing' => false,
                 'is_staff_only_posting' => false,
+                'belongs_to_category' => 2,
                 'created_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString()
             ],
@@ -70,6 +75,7 @@ class CreateForumTopicsTable extends Migration
                 'home_page_priority' => 70,
                 'is_staff_only_viewing' => false,
                 'is_staff_only_posting' => false,
+                'belongs_to_category' => 2,
                 'created_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString()
             ],
@@ -79,6 +85,7 @@ class CreateForumTopicsTable extends Migration
                 'home_page_priority' => 60,
                 'is_staff_only_viewing' => false,
                 'is_staff_only_posting' => false,
+                'belongs_to_category' => 3,
                 'created_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString()
             ],
@@ -88,6 +95,7 @@ class CreateForumTopicsTable extends Migration
                 'home_page_priority' => 50,
                 'is_staff_only_viewing' => false,
                 'is_staff_only_posting' => false,
+                'belongs_to_category' => 3,
                 'created_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString()
             ],
@@ -97,6 +105,7 @@ class CreateForumTopicsTable extends Migration
                 'home_page_priority' => 40,
                 'is_staff_only_viewing' => true,
                 'is_staff_only_posting' => true,
+                'belongs_to_category' => 3,
                 'created_at' => Carbon::now()->toDateTimeString(),
                 'updated_at' => Carbon::now()->toDateTimeString()
             ]

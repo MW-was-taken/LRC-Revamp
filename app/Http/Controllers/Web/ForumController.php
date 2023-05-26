@@ -2,6 +2,7 @@
  
 namespace App\Http\Controllers\Web;
 
+use App\Models\ForumCategory;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\ForumReply;
@@ -16,13 +17,18 @@ class ForumController extends Controller
 {
     public function index()
     {
-        $topics = ForumTopic::where('is_staff_only_viewing', false)->orderBy('home_page_priority', 'DESC')->get();
         $recentPosts = ForumThread::limit(24)->orderBy('updated_at', 'DESC')->get();
+        /*
         if (Auth::check() && Auth::user()->isStaff())
             $topics = ForumTopic::orderBy('home_page_priority', 'DESC')->get();
+        else
+            $topics = ForumTopic::where('is_staff_only_viewing', false)->orderBy('home_page_priority', 'DESC')->get();
+        */
+        $categories = ForumCategory::get();
+
 
         return view('web.forum.index')->with([
-            'topics' => $topics,
+            'categories' => $categories,
             'posts' => $recentPosts,
         ]);
     }

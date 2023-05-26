@@ -18,7 +18,8 @@ class ForumTopic extends Model
         'description',
         'home_page_priority',
         'is_staff_only_viewing',
-        'is_staff_only_posting'
+        'is_staff_only_posting',
+        'belongs_to_category'
     ];
 
     public function threads($hasPagination = true)

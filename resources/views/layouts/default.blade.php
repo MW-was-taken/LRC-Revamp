@@ -89,6 +89,10 @@
             border-radius: 50%;
             width: 40px;
         }
+
+        .rounded {
+            border-radius: 3px!important;
+        }
     </style>
     @yield('css')
 </head>

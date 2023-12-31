@@ -1,5 +1,5 @@
 <?php
- 
+
 use App\Models\Item;
 use App\Models\User;
 use App\Models\Group;
@@ -13,21 +13,21 @@ use Illuminate\Support\Facades\Storage;
 
 require_once(__DIR__ . '/PaypalIPN.php');
 
-function site_setting($key)
+function site_setting($key = false)
 {
-    $settings = SiteSettings::where('id', '=', 1)->first();
+    $settings = SiteSettings::find(1)->first();
 
-    return $settings->$key;
+    return !$key ? $settings : $settings->$key;
 }
 
 function staffUser()
 {
-    return User::where('id', '=', session('staff_user_site_id'))->first();
+    return User::find(session('staff_user_site_id'));
 }
 
 function pendingAssetsCount()
 {
-    if (Auth::user()->staff('can_review_pending_assets'))
+    if (auth()->user()->staff('can_review_pending_assets'))
         return Item::where('status', '=', 'pending')->count() + Group::where('is_thumbnail_pending', '=', true)->count();
 
     return 0;
@@ -35,8 +35,8 @@ function pendingAssetsCount()
 
 function pendingReportsCount()
 {
-    if (Auth::user()->staff('can_review_pending_reports'))
-        return Report::where('is_seen', '=', false)->count();
+    if (auth()->user()->staff('can_review_pending_reports'))
+        return Report::whereIsSeen(false)->count();
 
     return 0;
 }

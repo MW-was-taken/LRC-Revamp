@@ -1,6 +1,6 @@
 <p align="center"><img src="https://raw.githubusercontent.com/FoxxoSnoot/laravel-roblox-clone/main/public/img/logo.png" width="400" style="max-width: 100%;"></p>
 <hr>
-this repo is dead while i work on other stuff
+This is a revamp of LRC. I have removed the renderer in the hopes that you can make your own.
 <br>
 <br>
 

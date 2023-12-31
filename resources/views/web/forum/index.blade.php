@@ -139,7 +139,7 @@
             </div>
             <div class="mb-2"></div>
             <div class="card-body p-2 px-3">
-                @foreach ($posts as $thread)
+                @forelse ($posts as $thread)
                     <div class="row topic rounded" @if ($thread->is_deleted) style="opacity:.5;" @endif>
                         <div class="col-md-8">
                             <div class="details text-truncate">
@@ -156,7 +156,9 @@
                         </div>
                     </div>
                     <div class="mb-1"></div>
-                @endforeach
+                @empty
+                    There are no posts here!
+                @endforelse
             </div>
         </div>
     </div>
@@ -194,7 +196,7 @@
     <span class="status text-white" style="background:#000;"><i
                                                     class="fas fa-lock mr-1"></i> Locked</span>
     @endif
-       
+
                                         <span class="hide-sm">Posted by</span>
                                         <a href="{{ route('users.profile', $thread->creator->username) }}"
                                             @if ($thread->creator->isStaff()) class="text-danger" @endif>{{ $thread->creator->username }}</a>

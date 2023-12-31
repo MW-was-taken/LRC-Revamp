@@ -1,5 +1,5 @@
 <?php
- 
+
 return [
     'name' => env('APP_NAME', 'Laravel Roblox Clone'),
     'logo' => '/img/logo.png',
@@ -11,18 +11,20 @@ return [
     // README: From lines 12 to 25, if you do not change these accordingly, the website literally will not work.
 
     'route_domains' => [
-        'admin_site' => 'http://panel.robloxclone.com',
+        'admin_site' => 'http://admin.robloxclone.com',
         'main_site' => 'http://www.robloxclone.com',
         'storage_site' => 'http://cdn.robloxclone.com',
         'referral_site' => 'http://refer.robloxclone.com',
     ],
 
-    'renderer' => [
-        'url' => 'renderer.robloxclone.com',
-        'key' => 'realrenderinghehehehe',
-        'default_filename' => 'user', // Default thumbnail filename
-        'previews_enabled' => false
-    ],
+    // Fix this yourself skiddie!
+
+//    'renderer' => [
+//        'url' => 'renderer.robloxclone.com',
+//        'key' => 'realrenderinghehehehe',
+//        'default_filename' => 'user', // Default thumbnail filename
+//        'previews_enabled' => false
+//    ],
 
     'official_thumbnail' => '/img/icon.png', // Headshot for the system account (ID 1)
 
